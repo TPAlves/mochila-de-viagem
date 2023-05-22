@@ -1,0 +1,181 @@
+html {
+ 
+    background: linear-gradient(120deg, #a1c4fd 100%, #82b7cf 100%);  
+    height: 100%;
+    font-family: 'Roboto', cursive;
+}
+
+.conteudo {
+    padding: 10vh 3em 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.principal {
+    flex-grow: 1;
+    flex-basis: auto;
+    min-width: 600px;
+    padding: 4em 2em 2em;
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    background-color: rgb(233,233,233);
+    border-radius: 10px;
+    gap: 2em;
+}
+  
+.mochila {
+    min-width: 170px;
+    max-width: 170px;
+    height: 180px;
+    padding-top: 80px;
+    background-color: #4f5355;
+    box-shadow: inset 0 6px 0 2px #4f5355, 0 -93px 0 -77px #25292b, 0 -93px 0 -72px #4f5355, 0 -93px 0 -68px #25292b;
+    background-image: linear-gradient(to right, transparent 5px, transparent 20px, transparent 1px, transparent 25px, transparent 5px, transparent 20px, transparent 20px, transparent 86px, #273b555b 45px, #273b555b 230px, transparent 25px, transparent 172px );
+    background-position: center 254px;
+    background-size: 305px 6px;
+    background-repeat: repeat-x; 
+    border: 5px solid #273b555b;
+    border-radius: 85px 85px 44px 44px;
+    display: inline-block;
+    vertical-align: top;
+    flex-basis: auto;
+    flex-grow: 1;
+}
+  
+.mochila:before, .mochila:after {
+    display: block;
+    content: '';
+    position: absolute;
+  }
+  
+.mochila:before {
+    height: 75px;
+    width: 118px;
+    background-image: radial-gradient(circle closest-corner at 13px 29px , #4f5355, #4f5355 2px, transparent 2px, transparent), radial-gradient(circle closest-corner at 13px 29px , #25292b, #25292b 4px, transparent 4px, transparent), linear-gradient(to bottom, transparent 10px, transparent 15px, #25292b 5px, #25292b 18px, transparent 18px, transparent 100px), linear-gradient(to right, #4f5355 10px, #4f5355 10px, transparent 10px, transparent 16px, #4f5355 9px, #4f5355 50px), linear-gradient(to bottom, #4f5355 8px, #4f5355 16px, #25292b 8px, #273b555b 30px, #4f5355 20px, #4f5355 72px, #4f5355 10px, #4f5355 57px, #4f5355 5%);
+    margin-left: 22px;
+    margin-top: 58px;
+    border: 4px solid #ffffff5b;
+    border-radius: 11px;
+    box-shadow: 0 4px 0 0 #4f5355, inset 0px 4px 1px 0 #273b555b;
+    content: '||';
+    color: transparent;
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    z-index: 1;
+    text-shadow: rgb(255, 255, 255) -2px -86px 0px;
+    font-size: 14px;
+}
+  
+.mochila:after {
+    margin-left: 67px;
+    margin-top: -30px;
+    background: #ffffff;
+    width:26px;
+    height:26px;
+    border: 3px solid #0000005b;
+    border-radius: 3px;
+    transform: rotate(45deg);
+}
+
+.adicionar {
+    width: 100%;
+}
+
+.adicionar input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5em 0 1em;
+    padding: 1em 0.5em;
+    border-radius: 10px;
+    border: 2px solid rgb(53, 107, 207);
+    /* border: 2px solid #40112D; */
+    outline: none;
+}
+
+.adicionar label {
+    display: block;
+}
+
+.cadastrar {
+    font-weight: bold;
+    background-color: rgb(53, 107, 207);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.cadastrar:hover{
+    background-color: rgb(25, 97, 230);
+    transition: 10;
+}
+
+.lista {
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    list-style: none;
+    padding: 0.6em 2em;
+    background:#FFFFFF;
+    border-radius: 10px;
+    margin: 0 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 20px;
+}
+
+.item strong {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    Background: #C5965F;
+    font-weight: 400;
+}
+
+.btn-remover{
+    display: inline-block;
+    margin: auto;
+    margin-right: 10px;
+    background-color: #D11A2A;
+    color: white;
+    font-size: 15px;
+    font-weight: bold; 
+    cursor: pointer;
+    border: 5px solid #D11A2A;
+}
+
+.btn-remover:hover{
+    font-size: 20px;
+}
+
+ @media screen and (max-width:1361px) { 
+    .conteudo{
+        display: flex;
+        flex: 100%;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .mochila::after, .mochila::before, .mochila{
+        display: none;
+    }
+
+    .principal{
+        max-width: auto;
+        min-width: auto;
+    }
+
+    .principal form{
+       flex: 100%;
+       width: auto;
+    }
+
+ }
