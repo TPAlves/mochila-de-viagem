@@ -1,1 +1,1 @@
-# Projeto que realiza um CRUD no LocalStorage
+# Projeto que realiza um CRUD com LocalStorage
